@@ -2,11 +2,10 @@
 
 Go to http://localhost:7681/ in the browser and login
 
-username: ansible 
+username: ansible,
+
 password: password 
 
-
-```
 
 update ubuntu 
 
