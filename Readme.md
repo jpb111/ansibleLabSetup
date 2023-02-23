@@ -62,7 +62,7 @@ rm password.txt
 
 
 
-if there is any the permission of the file to executable 
+if there is any the permission issues, change the permission of the script file
 
 ```bash
 
