@@ -1,7 +1,6 @@
 # Ansible lab setup with Ubuntu and CentOS host containers 
 
-Go to http://localhost:7681/ in the browser 
-Click ansible terminal and click ubuntu c and login. 
+Go to http://localhost:7681/ in the browser and login
 
 username: ansible 
 password: password 
