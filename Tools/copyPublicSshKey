@@ -7,6 +7,8 @@
 
 # Print text to the screen 
 
+sudo apt update 
+
 ssh-keygen
 sudo apt install sshpass
 echo password > password.txt
@@ -21,3 +23,5 @@ done
 
 rm password.txt
 
+ansible all -i inventory.py --list-hosts
+ansible all -i inventory.py -m ping 

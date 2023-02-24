@@ -75,13 +75,11 @@ class Inventory(object):
             }}
 
         self.hostvars = {
-            'centos1': {
-                'ansible_port': 2222
-            },
+          
             'ubuntu-c': {
                 'ansible_connection': 'local'
             }
-        }
+        } 
 
     # Pretty print JSON
     def print_json(self, content):
