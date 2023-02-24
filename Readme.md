@@ -20,7 +20,7 @@ sudo apt update
 cd Tools 
 
 ```
-run the below script 
+run the below script to copy the ssh key and test the ansible ping. 
 
 ```
 ./copyPublicSshKey
@@ -39,6 +39,8 @@ run the below script
 
 # Print text to the screen 
 
+sudo apt update 
+
 ssh-keygen
 sudo apt install sshpass
 echo password > password.txt
@@ -53,29 +55,23 @@ done
 
 rm password.txt
 
+ansible all -i inventory.py --list-hosts
+ansible all -i inventory.py -m ping 
+
+cd .. 
 
 
 ```
 
-
-
-
-if there is any the permission issues, change the permission of the script file
+In the home directory git clone the kubernetes installation repository.  
 
 ```bash
 
-chmod 744 copyPublicSshKey
 
-
-```
-
-
-
-
-```bash
-
-ansible -i,ubuntu1,ubuntu2,ubuntu3,centos1,centos2,centos3 all -m ping
+git clone https://github.com/jpb111/kubernetes-ansible.git
 
 ```
+
+
 
 
