@@ -58,7 +58,7 @@ rm password.txt
 ansible all -i inventory.py --list-hosts
 ansible all -i inventory.py -m ping 
 
-cd .. 
+
 
 
 ```
@@ -67,10 +67,25 @@ In the home directory git clone the kubernetes installation repository.
 
 ```bash
 
+cd ..
+
 
 git clone https://github.com/jpb111/kubernetes-ansible.git
 
 ```
+
+Create the kubernetes cluster by running the ansible playbook site.yml 
+
+```bash
+
+cd kubernetes-ansible
+
+ansible-playbook site.yml -i inventory/inventory.yml
+
+```
+
+
+
 
 
 

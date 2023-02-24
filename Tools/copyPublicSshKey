@@ -26,4 +26,3 @@ rm password.txt
 ansible all -i inventory.py --list-hosts
 ansible all -i inventory.py -m ping 
 
-cd .. 
