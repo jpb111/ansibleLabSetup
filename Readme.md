@@ -80,7 +80,7 @@ Create the kubernetes cluster by running the ansible playbook site.yml
 
 cd kubernetes-ansible
 
-ansible-playbook site.yml -i inventory/inventory.yml
+ansible-playbook site.yml 
 
 ```
 
