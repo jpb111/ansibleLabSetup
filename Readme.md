@@ -1,6 +1,7 @@
 # Ansible lab setup with Ubuntu and CentOS host containers 
 
-Go to http://localhost:7681/ in the browser and login
+Go to http://localhost:7681/ in the browser and login. 
+if planning to install kubernetes skip this section and go to install kubernetes below. 
 
 username: ansible,
 
@@ -63,14 +64,29 @@ ansible all -i inventory.py -m ping
 
 ```
 
+## Install kubernetes 
+
+logout and login as root user 
+
+username: root
+password: password 
+
 In the home directory git clone the kubernetes installation repository.  
 
 ```bash
 
-cd ..
-
-
 git clone https://github.com/jpb111/kubernetes-ansible.git
+
+cd kubernetes-ansible
+
+
+```
+go to tools and run the copyPublicShKey script. 
+
+```bash 
+cd tools
+
+./copyPublicShKey
 
 ```
 
@@ -78,13 +94,25 @@ Create the kubernetes cluster by running the ansible playbook site.yml
 
 ```bash
 
+cd ~
 cd kubernetes-ansible
 
 ansible-playbook site.yml 
 
 ```
 
+Copy the KUBECONFIG file 
 
+```bash
+
+export KUBECONFIG=/root/kubernetes-ansible/inventory/artifacts/k0s-kubeconfig.yml
+
+```
+
+```bash
+
+
+```
 
 
 
